@@ -93,19 +93,21 @@ export default function Home() {
 
     {loading && <p>Loading Smart Account...</p>}
     {smartAccount && provider && (
-     <div>
+     <>
       <Count provider={provider} />
-      <Counter2
-       smartAccount={smartAccount}
-       address={address}
-       provider={provider}
-      />
-      <Decrement
-       smartAccount={smartAccount}
-       address={address}
-       provider={provider}
-      />
-     </div>
+      <div className="flex">
+       <Counter2
+        smartAccount={smartAccount}
+        address={address}
+        provider={provider}
+       />
+       <Decrement
+        smartAccount={smartAccount}
+        address={address}
+        provider={provider}
+       />
+      </div>
+     </>
     )}
    </main>
   </>
