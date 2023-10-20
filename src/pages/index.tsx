@@ -47,6 +47,7 @@ export default function Home() {
    // console.log("Logged in user:", userInfo);
    // const particleProvider = new ParticleProvider(particle.auth);
    const web3Provider = new ethers.providers.Web3Provider(
+    //@ts-ignore
     window.ethereum,
     "goerli"
    );
