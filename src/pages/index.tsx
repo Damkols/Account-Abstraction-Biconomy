@@ -18,6 +18,7 @@ import Counter from "./components/Counter";
 import Counter2 from "./components/Counter";
 import Decrement from "./components/Decrement";
 import Count from "./components/Count";
+import RealSender from "./components/RealSender";
 
 export default function Home() {
  const [address, setAddress] = useState<string>("");
@@ -107,6 +108,9 @@ export default function Home() {
         address={address}
         provider={provider}
        />
+      </div>
+      <div className="real">
+       <RealSender provider={provider} />
       </div>
      </>
     )}
