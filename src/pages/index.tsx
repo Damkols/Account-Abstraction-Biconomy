@@ -54,7 +54,7 @@ export default function Home() {
    setProvider(web3Provider);
    console.log(provider);
 
-   const module = await ECDSAOwnershipValidationModule.create({
+   const moduler = await ECDSAOwnershipValidationModule.create({
     signer: web3Provider.getSigner(),
     moduleAddress: DEFAULT_ECDSA_OWNERSHIP_MODULE,
    });
@@ -64,8 +64,8 @@ export default function Home() {
     bundler: bundler,
     paymaster: paymaster,
     entryPointAddress: DEFAULT_ENTRYPOINT_ADDRESS,
-    defaultValidationModule: module,
-    activeValidationModule: module,
+    defaultValidationModule: moduler,
+    activeValidationModule: moduler,
    });
    setAddress(await biconomySmartAccount.getAccountAddress());
    setSmartAccount(biconomySmartAccount);
